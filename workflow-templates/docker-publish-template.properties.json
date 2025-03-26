@@ -1,0 +1,11 @@
+{
+    "name": "Drupal Forge Docker Publish Workflow",
+    "description": "Drupal Forge deployment workflow template.",
+    "iconName": "docker-mark-blue",
+    "categories": [
+        "deployment"
+    ],
+    "filePatterns": [
+        "^\\.devpanel$"
+    ]
+}
