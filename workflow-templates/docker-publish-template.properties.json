@@ -1,6 +1,6 @@
 {
     "name": "Drupal Forge Docker Publish Workflow",
-    "description": "Drupal Forge deployment workflow template.",
+    "description": "Commit a new Docker image when a commit is pushed to your main branch. If your repository is in the Drupal Forge organization, the image will be in the Drupal Forge Docker Hub account by default.",
     "iconName": "docker-mark-blue",
     "categories": [
         "deployment"
