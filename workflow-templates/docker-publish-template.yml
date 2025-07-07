@@ -4,6 +4,7 @@ on:
     branches:
       - $default-branch
       - test/*
+  workflow_dispatch:
 jobs:
   build-application:
     uses: drupalforge/docker_publish_action/.github/workflows/docker-publish.yml@main
