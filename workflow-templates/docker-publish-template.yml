@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - $default-branch
-      - test/*
   workflow_dispatch:
 jobs:
   build-application:
