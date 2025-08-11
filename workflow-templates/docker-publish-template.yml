@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - $default-branch
+  schedule:
+    - cron: '0 11 * * 0,1,2,3,4,5'
   workflow_dispatch:
 jobs:
   build-application:
