@@ -17,5 +17,8 @@ jobs:
       dockerhub_username: ${{ vars.DOCKERHUB_USERNAME }}
     secrets:
       dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
-      dp_ai_virtual_key: ${{ secrets.DP_AI_VIRTUAL_KEY }}
-      composer_auth: ${{ secrets.COMPOSER_AUTH }}
+      init_env: |
+        {
+          "DP_AI_VIRTUAL_KEY": ${{ toJSON(secrets.DP_AI_VIRTUAL_KEY) }},
+          "COMPOSER_AUTH": ${{ toJSON(secrets.COMPOSER_AUTH) }}
+        }
