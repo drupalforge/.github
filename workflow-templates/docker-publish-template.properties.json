@@ -1,9 +1,9 @@
 {
     "name": "Docker build and push template",
-    "description": "Commits a new Docker image when a commit is pushed to the default branch. The image will be published to the Drupal Forge Docker Hub account by default.",
+    "description": "Builds and publishes images to Drupal Forge Docker Hub by default, with GitHub Container Registry as a fallback.",
     "iconName": "docker-mark-blue",
     "categories": [
-        "deployment"
+        "Deployment"
     ],
     "filePatterns": [
         "^\\.devpanel$"
