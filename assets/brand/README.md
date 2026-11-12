@@ -20,12 +20,12 @@ artwork is the **Final Logos** frame in the
 Use the supplied SVG files, which are exported from that frame, without
 modification.
 
-| Variant | File | Use it for |
+| Variant | Preview | Use it for |
 | --- | --- | --- |
-| Horizontal | [`drupalforge-horizontal.svg`](logo/drupalforge-horizontal.svg) | Headers, footers, and other wide spaces |
-| Vertical, stacked text | [`drupalforge-vertical-stacked-text.svg`](logo/drupalforge-vertical-stacked-text.svg) | Square spaces such as avatars, social cards, and slides |
-| Vertical, one-line text | [`drupalforge-vertical-one-line-text.svg`](logo/drupalforge-vertical-one-line-text.svg) | Tall or medium spaces where stacked text would be too narrow |
-| Mark only | [`drupalforge-mark.svg`](logo/drupalforge-mark.svg) | Favicons, small icons, and places where the name appears nearby |
+| Horizontal | [<img src="logo/drupalforge-horizontal.svg" alt="drupalforge-horizontal.svg" width="200" />](logo/drupalforge-horizontal.svg) | Headers, footers, and other wide spaces |
+| Vertical, stacked text | [<img src="logo/drupalforge-vertical-stacked-text.svg" alt="drupalforge-vertical-stacked-text.svg" width="200" />](logo/drupalforge-vertical-stacked-text.svg) | Square spaces such as avatars, social cards, and slides |
+| Vertical, one-line text | [<img src="logo/drupalforge-vertical-one-line-text.svg" alt="drupalforge-vertical-one-line-text.svg" width="200" />](logo/drupalforge-vertical-one-line-text.svg) | Tall or medium spaces where stacked text would be too narrow |
+| Mark only | [<img src="logo/drupalforge-mark.svg" alt="drupalforge-mark.svg" width="200" />](logo/drupalforge-mark.svg) | Favicons, small icons, and places where the name appears nearby |
 
 The Final Logos frame also contains lockups that aren't exported here yet: a
 "FORGE"-only version of the vertical and horizontal lockups, a horizontal
@@ -75,19 +75,19 @@ These colors are used in the final logo artwork in Figma and its SVG exports.
 The Figma file has no separate palette sheet, so the logo colors are the brand
 palette.
 
-| Role | Hex | RGB |
-| --- | --- | --- |
-| Drop blue | `#0073BA` | 0, 115, 186 |
-| Drop blue, shade | `#00598E` | 0, 89, 142 |
-| Drop blue, deep shade | `#004975` | 0, 73, 117 |
-| Drop outline navy | `#192849` | 25, 40, 73 |
-| Drop highlight | `#93C5E4` | 147, 197, 228 |
-| Handle yellow | `#FFDE17` | 255, 222, 23 |
-| Handle yellow, shade | `#DBBF00` | 219, 191, 0 |
-| Handle yellow, deep shade | `#BD9C00` | 189, 156, 0 |
-| Hammer head gray, dark | `#414042` | 65, 64, 66 |
-| Hammer head gray, mid | `#808285` | 128, 130, 133 |
-| Wordmark black | `#231F20` | 35, 31, 32 |
+| Role | Swatch | Hex | RGB |
+| --- | --- | --- | --- |
+| Drop blue | $\color{#0073BA}{\rule{40pt}{12pt}}$ | `#0073BA` | 0, 115, 186 |
+| Drop blue, shade | $\color{#00598E}{\rule{40pt}{12pt}}$ | `#00598E` | 0, 89, 142 |
+| Drop blue, deep shade | $\color{#004975}{\rule{40pt}{12pt}}$ | `#004975` | 0, 73, 117 |
+| Drop outline navy | $\color{#192849}{\rule{40pt}{12pt}}$ | `#192849` | 25, 40, 73 |
+| Drop highlight | $\color{#93C5E4}{\rule{40pt}{12pt}}$ | `#93C5E4` | 147, 197, 228 |
+| Handle yellow | $\color{#FFDE17}{\rule{40pt}{12pt}}$ | `#FFDE17` | 255, 222, 23 |
+| Handle yellow, shade | $\color{#DBBF00}{\rule{40pt}{12pt}}$ | `#DBBF00` | 219, 191, 0 |
+| Handle yellow, deep shade | $\color{#BD9C00}{\rule{40pt}{12pt}}$ | `#BD9C00` | 189, 156, 0 |
+| Hammer head gray, dark | $\color{#414042}{\rule{40pt}{12pt}}$ | `#414042` | 65, 64, 66 |
+| Hammer head gray, mid | $\color{#808285}{\rule{40pt}{12pt}}$ | `#808285` | 128, 130, 133 |
+| Wordmark black | $\color{#231F20}{\rule{40pt}{12pt}}$ | `#231F20` | 35, 31, 32 |
 
 For text and interface elements, use drop blue as the primary accent and
 wordmark black for text. Use yellow sparingly for highlights; don't use yellow
