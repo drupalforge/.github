@@ -9,16 +9,16 @@ Fix Drupal Canvas configuration errors caused by JSON-encoded `component_tree.in
 ## 1. Check prerequisites before editing
 
 1. **Identify the candidate.** Read repository guidance and the first relevant CI exception to identify the likely configuration-owning package and its version or commit, separately from Canvas. Confirm ownership from source, not assumptions.
-2. **Verify source access early.** Before deeper investigation, read installed source, check Composer's configured cache, or retrieve the candidate's exact release from upstream or a verifiable mirror. Inspect actual source, not just metadata, and resolve conflicting references. Request specific cache-path or endpoint approval if needed; task scope does not grant platform permissions.
+2. **Verify source access early.** Before deeper investigation, read installed source, check Composer’s configured cache, or retrieve the candidate’s exact release from upstream or a verifiable mirror. Inspect actual source, not just metadata, and resolve conflicting references. Request specific cache-path or endpoint approval if needed; task scope does not grant platform permissions.
 3. **Proceed or give one consolidated blocker report.** If source is available, identify the upstream repository, patch workflow, and configured Composer/Drush runners. Briefly state available validation and remaining limits before editing. Use available parsers or permitted isolated dependency setup; do not assume DDEV or treat a missing root manifest as a blocker. If source is unavailable, stop before edits. Report the outcome/change status and all known actionable blockers, each with the required user action and concise evidence (package/version, command/error, or cache result). Order dependent actions and label alternatives. Label tentative ownership and distinguish access failures from secondary tooling limits.
 
-For cloud source-access blockers, briefly state the outcome and evidence, then use the following response layout: two alternative bullet items, with an explicit nested two-step numbered list under "Start a new session with source access." Preserve the numbering and links in the final response; do not collapse the steps into prose. Substitute the current GitHub repository's `<owner>/<repo>` from task context or its remote, and specify the required package/version without implying ownership is confirmed. DNS failure alone does not prove a firewall block.
+For cloud source-access blockers, briefly state the outcome and evidence, then use the following response layout: two alternative bullet items, with an explicit nested two-step numbered list under "Start a new session with source access." Preserve the numbering and links in the final response; do not collapse the steps into prose. Substitute the current GitHub repository’s `<owner>/<repo>` from task context or its remote, and specify the required package/version without implying ownership is confirmed. DNS failure alone does not prove a firewall block.
 
 - **Continue in this session:** Find and download an archive containing the exact source files to be patched, then upload it using the **Attach (+)** button below the message field. Include the official release/archive link when known; otherwise link to the upstream release page and name the required version.
 - **Start a new session with source access:**
 
   1. Add the required source domains (commonly `git.drupalcode.org`, `packages.drupal.org`, and `ftp.drupal.org`) to the [Copilot cloud allowlist](https://github.com/<owner>/<repo>/settings/copilot/internet_access/allowlist?product=cloud_agent), save the changes, and keep the firewall enabled.
-  2. Open the repository's [Agents page](https://github.com/<owner>/<repo>/agents) and start a new cloud session with this agent and the original task/job link. The agent will check source access automatically before editing; the user does not need to run checks. Do not assume the existing environment refreshes.
+  2. Open the repository’s [Agents page](https://github.com/<owner>/<repo>/agents) and start a new cloud session with this agent and the original task/job link. The agent will check source access automatically before editing; the user does not need to run checks. Do not assume the existing environment refreshes.
 
 ## 2. Prepare the fix
 
@@ -30,14 +30,14 @@ For cloud source-access blockers, briefly state the outcome and evidence, then u
 ## 3. Validate
 
 - Parse the YAML and compare decoded inputs before and after conversion for value and type preservation. Verify every relevant tree entry has map inputs and no JSON-string inputs remain; do not rely solely on text searches.
-- Dry-run the patch against the exact target package source. Validate `patches.json`, then use the project's Composer workflow to regenerate patch-lock metadata, apply the patch, and verify a reinstall retains it. Re-parse the resulting package configuration. Use an isolated Composer test project when the deployment repository has no usable root manifest.
+- Dry-run the patch against the exact target package source. Validate `patches.json`, then use the project’s Composer workflow to regenerate patch-lock metadata, apply the patch, and verify a reinstall retains it. Re-parse the resulting package configuration. Use an isolated Composer test project when the deployment repository has no usable root manifest.
 - Run the smallest available configuration/schema check or relevant build. Report unavailable checks and failed commands explicitly; patch application alone does not prove the original CI job passes.
 
 ## 4. Hand off upstream
 
 - Report whether the fix is verified, partially validated, or blocked. List affected files/entries, validation commands and results, and remaining requirements. Separate unrelated Composer warnings from failures.
 - For package fixes, recommend that the user submit an upstream merge request. Identify the upstream repository and package-relative changes, and label the local patch and its `patches.json` registration as temporary validation artifacts.
-- Once the upstream commit exists, recommend replacing the local patch path in `patches.json` with that commit's immutable patch URL, not a mutable merge-request diff URL. Drupal GitLab uses `https://git.drupalcode.org/project/<project>/-/commit/<full-commit-sha>.patch`; never invent a SHA or register a placeholder.
+- Once the upstream commit exists, recommend replacing the local patch path in `patches.json` with that commit’s immutable patch URL, not a mutable merge-request diff URL. Drupal GitLab uses `https://git.drupalcode.org/project/<project>/-/commit/<full-commit-sha>.patch`; never invent a SHA or register a placeholder.
 - When making that replacement, download and dry-run the upstream patch against the target release, regenerate patch-lock metadata and checksums using the project workflow, and verify Composer application before removing the temporary local patch.
 
 ## Boundaries

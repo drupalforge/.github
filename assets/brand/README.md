@@ -7,7 +7,7 @@ resources, see the [press kit](press-kit.md).
 ## Name
 
 - Write **Drupal Forge**: two words, both capitalized.
-- Don't write `DrupalForge`, `Drupalforge`, `Drupal-Forge`, or `DF` in public
+- Don’t write `DrupalForge`, `Drupalforge`, `Drupal-Forge`, or `DF` in public
   copy.
 - Use lowercase `drupalforge` only in machine names such as URLs, repository and
   package names, hashtags, and handles.
@@ -27,7 +27,7 @@ modification.
 | Vertical, one-line text | [<img src="logo/drupalforge-vertical-one-line-text.svg" alt="drupalforge-vertical-one-line-text.svg" width="200" />](logo/drupalforge-vertical-one-line-text.svg) | Tall or medium spaces where stacked text would be too narrow |
 | Mark only | [<img src="logo/drupalforge-mark.svg" alt="drupalforge-mark.svg" width="200" />](logo/drupalforge-mark.svg) | Favicons, small icons, and places where the name appears nearby |
 
-The Final Logos frame also contains lockups that aren't exported here yet: a
+The Final Logos frame also contains lockups that aren’t exported here yet: a
 "FORGE"-only version of the vertical and horizontal lockups, a horizontal
 lockup with the text to the left of the mark, and a circular badge with
 "DRUPAL" and "FORGE" set around the mark inside a blue ring. Ask the maintainers
@@ -41,12 +41,12 @@ light, plain background. On dark or busy backgrounds, put it on a white panel.
 
 ### Clear space and minimum size
 
-The Figma source doesn't specify clear space or minimum sizes. Until the
+The Figma source doesn’t specify clear space or minimum sizes. Until the
 maintainers approve final values, use these provisional rules:
 
 - **Clear space:** keep empty space on every side at least equal to the height
   of the capital letters in the wordmark. For the mark alone, use a quarter of
-  the mark's width.
+  the mark’s width.
 - **Minimum size on screen:**
 
   | Variant | Minimum |
@@ -59,7 +59,7 @@ maintainers approve final values, use these provisional rules:
   Below these sizes, the wordmark or the hammer detail becomes hard to read. For
   favicons smaller than 24 px, check that the mark is still recognizable.
 
-### Don't
+### Don’t
 
 - Recolor, outline, or add gradients, shadows, or other effects.
 - Stretch, squash, rotate, or crop the artwork.
@@ -90,16 +90,16 @@ palette.
 | Wordmark black | $\color{#231F20}{\rule{40pt}{12pt}}$ | `#231F20` | 35, 31, 32 |
 
 For text and interface elements, use drop blue as the primary accent and
-wordmark black for text. Use yellow sparingly for highlights; don't use yellow
-text on white because it isn't legible.
+wordmark black for text. Use yellow sparingly for highlights; don’t use yellow
+text on white because it isn’t legible.
 
 ## Typography
 
 Figma confirms the all-caps wordmark uses **Montserrat Bold**. The wordmark in
-the SVG files is outlined, so you don't need the font to use the logo, and you
-shouldn't retype it.
+the SVG files is outlined, so you don’t need the font to use the logo, and you
+shouldn’t retype it.
 
-The Figma file doesn't specify a typeface for supporting text. For graphics
+The Figma file doesn’t specify a typeface for supporting text. For graphics
 such as social cards and slides, Montserrat is a suggested match: use Bold for
 headings and Regular or Medium for body text. Montserrat is free under the SIL
 Open Font License from
@@ -117,4 +117,4 @@ Editable sources are in the **Final Logos** frame of the
 [Drupal Forge Logos Figma file](https://www.figma.com/design/g4xiifOjNmy1IVQq5AbP0O/Logos?node-id=1-3896).
 Anyone with the link can view the file. Ask the maintainers in
 [#drupalforge](https://drupal.slack.com/archives/C077WUMH7P1) on Drupal Slack if
-you need a lockup or format that isn't listed here.
+you need a lockup or format that isn’t listed here.

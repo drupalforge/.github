@@ -19,7 +19,7 @@ specific consumer needs them.
 | [`brand/logo/drupalforge-vertical-stacked-text.svg`](brand/logo/drupalforge-vertical-stacked-text.svg) | Vertical logo with stacked text |
 | [`brand/logo/drupalforge-mark.svg`](brand/logo/drupalforge-mark.svg) | Mark only |
 
-Use the supplied colors and proportions; don't recolor or distort the artwork.
+Use the supplied colors and proportions; don’t recolor or distort the artwork.
 See the [brand guidelines](brand/README.md#logo) for usage rules.
 
 ## Organization
