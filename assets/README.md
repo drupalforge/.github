@@ -4,7 +4,13 @@ Everything in this directory is public. Keep confidential files and editable
 design sources elsewhere. Prefer SVG for logos; add raster copies only when a
 specific consumer needs them.
 
-## Brand logos
+## Brand
+
+- [Brand guidelines](brand/README.md): name, logo use, color, and typography.
+- [Boilerplate](brand/boilerplate.md): approved descriptions and links.
+- [Press kit](brand/press-kit.md): key facts, logo downloads, and contacts.
+
+### Logos
 
 | File | Composition |
 | --- | --- |
@@ -14,6 +20,7 @@ specific consumer needs them.
 | [`brand/logo/drupalforge-mark.svg`](brand/logo/drupalforge-mark.svg) | Mark only |
 
 Use the supplied colors and proportions; don't recolor or distort the artwork.
+See the [brand guidelines](brand/README.md#logo) for usage rules.
 
 ## Organization
 
