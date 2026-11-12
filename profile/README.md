@@ -39,10 +39,10 @@ Drupal Forge relies on volunteers to move it forward.
 
 Free demos and the cloud development environment rely on donors.
 
-- [Open Collective](https://opencollective.com/drupalforge): donate and view the
-  budget.
-- Sponsors can donate at the sponsor level, fund hosting for specific demos, or
-  promote a service that adds value to Drupal.
+- [GitHub Sponsors](https://github.com/sponsors/drupalforge): support Drupal Forge.
+- To discuss sponsorship opportunities, such as hosting specific demos or
+  promoting a service that adds value to Drupal, contact a maintainer listed
+  on the [project page](https://www.drupal.org/project/drupalforge).
 - [OPS Association public documents](https://drive.google.com/drive/folders/1uH7UwCzjKlior_Kf53Jv_UE2sPkxsJC-):
   public records from Drupal Forge’s fiscal host.
 
