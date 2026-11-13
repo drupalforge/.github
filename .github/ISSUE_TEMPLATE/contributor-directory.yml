@@ -1,0 +1,63 @@
+name: Join the contributor directory
+description: List your accounts in the Drupal Forge contributor directory, or update your listing.
+title: "Contributor directory: "
+labels: ["contributor directory"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to add or update your row in the
+        [Drupal Forge contributor directory](https://github.com/drupalforge/.github/blob/main/CONTRIBUTORS.md).
+        Listing is optional, and it doesn't grant access to anything.
+
+        A maintainer reviews the issue and assigns it to the GitHub account
+        to list, which is usually the person who opened it. Then a workflow
+        checks that each account below exists and opens a pull request with
+        the row. Leave a field blank if there's no account there. To fix a
+        mistake, edit this issue.
+
+        This form only works in the
+        [drupalforge/.github](https://github.com/drupalforge/.github/issues/new?template=contributor-directory.yml)
+        repository.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The name to show in the directory, such as the name on your public profiles.
+      placeholder: Ada Lovelace
+    validations:
+      required: true
+  - type: input
+    id: drupal-org
+    attributes:
+      label: drupal.org username
+      description: Your username, not your profile URL.
+    validations:
+      required: false
+  - type: input
+    id: git-drupalcode-org
+    attributes:
+      label: git.drupalcode.org username
+      description: Your username on Drupal's GitLab, which is often the same as on drupal.org.
+    validations:
+      required: false
+  - type: input
+    id: gitlab-com
+    attributes:
+      label: gitlab.com username
+    validations:
+      required: false
+  - type: input
+    id: drupal-slack
+    attributes:
+      label: Drupal Slack display name
+      description: Your display name in the drupal.slack.com workspace, without the @.
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: These accounts belong to the person being listed, who agrees to list them publicly.
+          required: true

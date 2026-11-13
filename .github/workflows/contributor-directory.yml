@@ -1,0 +1,31 @@
+name: Contributor directory
+
+# Opens a pull request for a contributor directory issue after a maintainer
+# adds the "add to directory" label. The issue is read as data only.
+on:
+  issues:
+    types: [labeled]
+
+permissions: {}
+
+concurrency:
+  group: contributor-directory
+  cancel-in-progress: false
+
+jobs:
+  open-pull-request:
+    if: github.event.label.name == 'add to directory' && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/github-script@v9
+        with:
+          script: |
+            const run = require('./.github/scripts/contributor-directory.js');
+            await run({ github, context, core });
