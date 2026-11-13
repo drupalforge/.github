@@ -8,59 +8,39 @@ contribution and collaboration.
   Forge works and why.
 - [Road map](https://www.drupal.org/docs/getting-started/sustainability/sustainable-contribution/drupal-forge/drupal-forge-road-map):
   explore planned work.
+- [Documentation](https://drupalforge.github.io/.github/): shared instructions
+  for visitors and organization members.
 
 ## Build a site template
 
 Sell ready-made Drupal sites and earn recurring revenue.
 
-- [Starter template](https://github.com/drupalforge/starter_template): create a
-  Composer-managed Drupal Forge site template.
-- [Docker publish action](https://github.com/drupalforge/docker_publish_action):
-  build and publish template images.
-- [Become a vendor](https://www.drupal.org/node/add/project-issue/drupalforge?categories=task&component=Vendors):
-  open an issue with the _Vendors_ component to sell sites through Drupal Forge.
-- Ask for help in [#drupalforge](https://drupal.slack.com/archives/C077WUMH7P1)
-  on Drupal Slack.
+Follow the [template setup guide](https://drupalforge.github.io/.github/template-setup.html)
+for repository setup, quick start images, DevPanel configuration, and your
+Drupal Forge template page. See [vendor information](https://drupalforge.github.io/.github/community.html#sell-site-templates)
+to sell sites through Drupal Forge.
 
 ## Volunteer
 
 Drupal Forge relies on volunteers to move it forward.
 
-- [Issue queue](https://www.drupal.org/project/issues/drupalforge): find, discuss,
-  and organize work.
-- [Volunteer meeting agenda](https://docs.google.com/document/d/1JP_2j7YfBADT4nPmfxKL71jSVpZ0_nNLNZIKFP-6U0I):
-  join the weekly volunteer meeting.
-- [Drupal Slack: #drupalforge](https://drupal.slack.com/archives/C077WUMH7P1):
-  connect with the community; Drupal Slack membership is required.
-- [Road map](https://www.drupal.org/docs/getting-started/sustainability/sustainable-contribution/drupal-forge/drupal-forge-road-map):
-  pick a task.
+See [Get involved](https://drupalforge.github.io/.github/community.html#volunteer)
+for the issue queue, weekly meeting, Slack channel, and road map.
 
 ## Donate or sponsor
 
 Free demos and the cloud development environment rely on donors.
 
 - [GitHub Sponsors](https://github.com/sponsors/drupalforge): support Drupal Forge.
-- To discuss sponsorship opportunities, such as hosting specific demos or
-  promoting a service that adds value to Drupal, contact a maintainer listed
-  on the [project page](https://www.drupal.org/project/drupalforge).
-- [OPS Association public documents](https://drive.google.com/drive/folders/1uH7UwCzjKlior_Kf53Jv_UE2sPkxsJC-):
-  public records from Drupal Forge’s fiscal host.
+- [Sponsorship information](https://drupalforge.github.io/.github/community.html#donate-or-sponsor):
+  contacts and public fiscal-host records.
 
 ## Partner
 
-Hosting providers, agencies, and other organizations can work with Drupal Forge
-to reach site owners. Start a conversation in
-[#drupalforge](https://drupal.slack.com/archives/C077WUMH7P1) or contact a
-maintainer listed on the
-[project page](https://www.drupal.org/project/drupalforge).
+See [partner information](https://drupalforge.github.io/.github/community.html#partner)
+for ways hosting providers, agencies, and other organizations can get involved.
 
 ## Press and brand
 
-- [Press kit](https://github.com/drupalforge/.github/blob/main/assets/brand/press-kit.md):
-  key facts, logos, and media contacts.
-- [Brand guidelines](https://github.com/drupalforge/.github/blob/main/assets/brand/README.md):
-  how to use the Drupal Forge name and logo.
-- [Boilerplate](https://github.com/drupalforge/.github/blob/main/assets/brand/boilerplate.md):
-  approved descriptions.
-- [Public Drupal Forge folder](https://drive.google.com/drive/folders/1MlQTpdy_5MnADbAUdF0RhzGBPUr6wZt_):
-  public project materials.
+See [Press and brand](https://drupalforge.github.io/.github/brand.html) for
+the press kit, brand guidelines, approved descriptions, and public materials.

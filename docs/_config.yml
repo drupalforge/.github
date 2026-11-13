@@ -1,0 +1,15 @@
+title: Drupal Forge documentation
+description: Guides for template creators, volunteers, and partners.
+url: https://drupalforge.github.io
+baseurl: /.github
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
