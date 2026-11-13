@@ -4,7 +4,7 @@ about: Track the tasks for setting up your Drupal Forge template.
 title: Drupal Forge template setup
 ---
 
-Follow the [template setup guide](https://drupalforge.github.io/template-setup.html).
+Follow the [template setup guide](https://github.com/drupalforge/starter_template/wiki).
 Check off tasks in this issue as you complete them. Do not include secrets.
 
 ## Prepare the repository
