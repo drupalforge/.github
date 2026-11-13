@@ -3,12 +3,15 @@
 
 const FILE = 'CONTRIBUTORS.md';
 const APPROVAL_LABEL = 'add to directory';
+const DIRECTORY_REQUEST = 'Contributor directory listing';
+const COMBINED_REQUEST = 'GitHub organization membership and a contributor directory listing';
 const NAME_PATTERN = /^[\p{L}\p{M}][\p{L}\p{M} .'’-]{0,99}$/u;
 const SLACK_PATTERN = /^[\p{L}\p{M}\p{N}][\p{L}\p{M}\p{N} ._'’-]{0,79}$/u;
 const DRUPAL_ORG_PATTERN = /^[\p{L}\p{M}\p{N} ._'@-]{1,60}$/u;
 const GITLAB_PATTERN = /^[A-Za-z0-9_][A-Za-z0-9_.-]{0,254}$/;
 
 const FIELDS = {
+  request: 'Request',
   name: 'Name',
   drupalOrg: 'drupal.org username',
   drupalCode: 'git.drupalcode.org username',
@@ -159,6 +162,16 @@ module.exports = async function run({ github, context, core }) {
   if (!['admin', 'maintain', 'write'].includes(permission.permission)) {
     return fail(`Only maintainers can approve directory listings, so the \`${APPROVAL_LABEL}\` label was removed.`);
   }
+
+  const form = parseIssueForm(issue.body);
+  const request = form[FIELDS.request];
+  if (request !== undefined && request !== DIRECTORY_REQUEST && request !== COMBINED_REQUEST) {
+    return fail(
+      `This issue does not request a directory listing. An organization owner should review membership requests; use the \`${APPROVAL_LABEL}\` label only when a listing is requested.`,
+    );
+  }
+  const includesMembership = request === COMBINED_REQUEST;
+
   // The assignee, not the issue author, is the GitHub account that gets listed.
   if (!login) {
     return fail(
@@ -169,7 +182,7 @@ module.exports = async function run({ github, context, core }) {
     return fail('Only personal GitHub accounts can be listed in the contributor directory.');
   }
 
-  const result = await validate(parseIssueForm(issue.body));
+  const result = await validate(form);
   if (result.errors.length) {
     return fail(
       `@${issue.user.login}, please edit this issue to fix the following. A maintainer will then review it again.\n\n` +
@@ -185,14 +198,19 @@ module.exports = async function run({ github, context, core }) {
   const { markdown, replaced } = upsertRow(current, login, row);
 
   if (markdown === current) {
-    await comment(`Your listing is already up to date:\n\n${row}`);
-    await github.rest.issues.update({
-      owner,
-      repo,
-      issue_number: issue.number,
-      state: 'closed',
-      state_reason: 'completed',
-    });
+    await comment(
+      `Your listing is already up to date:\n\n${row}` +
+        (includesMembership ? '\n\nThis issue remains open for the membership request.' : ''),
+    );
+    if (!includesMembership) {
+      await github.rest.issues.update({
+        owner,
+        repo,
+        issue_number: issue.number,
+        state: 'closed',
+        state_reason: 'completed',
+      });
+    }
     return;
   }
 
@@ -225,7 +243,7 @@ module.exports = async function run({ github, context, core }) {
     path: FILE,
     branch,
     sha: file.sha,
-    message: `docs: ${verb} ${login} in the contributor directory\n\nCloses #${issue.number}`,
+    message: `docs: ${verb} ${login} in the contributor directory\n\n${includesMembership ? 'Refs' : 'Closes'} #${issue.number}`,
     content: Buffer.from(markdown).toString('base64'),
   });
 
@@ -236,7 +254,9 @@ module.exports = async function run({ github, context, core }) {
     '| --- | --- | --- | --- | --- | --- |',
     row,
     '',
-    `Closes #${issue.number}`,
+    includesMembership
+      ? 'A maintainer will close the issue after both the listing and the membership request are handled.'
+      : `Closes #${issue.number}`,
   ].join('\n');
   const { data: existing } = await github.rest.pulls.list({
     owner,

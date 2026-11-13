@@ -1,32 +1,51 @@
-name: Join the contributor directory
-description: List your accounts in the Drupal Forge contributor directory, or update your listing.
-title: "Contributor directory: "
-labels: ["contributor directory"]
+name: Request GitHub membership or a directory listing
+description: Request GitHub organization membership, a contributor directory listing, or both.
+title: "Contributor request: "
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form to add or update your row in the
-        [Drupal Forge contributor directory](https://github.com/drupalforge/.github/blob/main/CONTRIBUTORS.md).
-        Listing is optional, and it doesn't grant access to anything.
+        Use this form to request membership in the Drupal Forge GitHub
+        organization, add or update a row in the
+        [contributor directory](https://github.com/drupalforge/.github/blob/main/CONTRIBUTORS.md),
+        or both. Membership and directory listings are independent.
 
-        A maintainer reviews the issue and assigns it to the GitHub account
-        to list, which is usually the person who opened it. Then a workflow
-        checks that each account below exists and opens a pull request with
-        the row. Leave a field blank if there's no account there. To fix a
-        mistake, edit this issue.
+        **This issue and everything you submit in it are public.** An
+        organization owner reviews membership requests and, if approved,
+        invites the GitHub account that opened the issue. You must accept the
+        invitation to join. Drupal Forge currently requires two-factor
+        authentication on GitHub.
 
         This form only works in the
         [drupalforge/.github](https://github.com/drupalforge/.github/issues/new?template=contributor-directory.yml)
         repository.
+  - type: dropdown
+    id: request
+    attributes:
+      label: Request
+      options:
+        - GitHub organization membership
+        - Contributor directory listing
+        - GitHub organization membership and a contributor directory listing
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Complete the fields below only if you want a directory listing. The
+        name and confirmation are required for a listing; other accounts are
+        optional. A maintainer assigns the issue to the GitHub account to
+        list, usually the person who opened it. A workflow then checks the
+        supplied accounts and opens a pull request if a change is needed.
+        To fix a mistake, edit this issue.
   - type: input
     id: name
     attributes:
       label: Name
-      description: The name to show in the directory, such as the name on your public profiles.
+      description: Required for a directory listing. The name to show, such as the name on your public profiles.
       placeholder: Ada Lovelace
     validations:
-      required: true
+      required: false
   - type: input
     id: drupal-org
     attributes:
@@ -58,6 +77,7 @@ body:
     id: confirm
     attributes:
       label: Confirmation
+      description: Required for a directory listing.
       options:
         - label: These accounts belong to the person being listed, who agrees to list them publicly.
-          required: true
+          required: false
